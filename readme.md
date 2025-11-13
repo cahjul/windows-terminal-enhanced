@@ -138,3 +138,4 @@ fi
 ## 🎉 Done!
 
 Your terminal is now modern, clean, and fully themed with Nerd Fonts + Oh My Posh + custom themes.
+*This readme.md is generated using OpenAI, however the step is tested on my device :P.
