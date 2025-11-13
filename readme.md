@@ -28,6 +28,7 @@ After installation:
 * Open **Windows Terminal Settings**
 * Go to **Defaults → Appearance → Font**
 * Choose your Nerd Font
+* or you can use this oh-my-posh font install command as long oh-my-posh installed.
 
 ---
 
