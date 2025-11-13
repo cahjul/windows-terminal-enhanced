@@ -99,6 +99,7 @@ clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-
 ---
 
 ## 🧩 10. Ensure Oh My Posh Loads Automatically for WSL (Ubuntu/Debian)
+Change Home Directory /etc/passwd  `/mnt/c/Users/$user`:
 
 Edit `.bashrc`:
 
