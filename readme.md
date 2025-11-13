@@ -8,9 +8,15 @@
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 nano ~/.bashrc
-## Inside .bashrc
+
+#Inside .bashrc
+
 eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
-8. For PowerShell, 
+
+8. For PowerShell, Microsoft.PowerShell_profile.ps1.
+
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json' | Invoke-Expression
-9. For CMD, you need to install clink.
+
+10. For CMD, you need to install clink.
+    
 clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json
