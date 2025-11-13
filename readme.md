@@ -8,15 +8,28 @@
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 nano ~/.bashrc
-
-#Inside .bashrc
-
+Inside .bashrc
 eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
-
-8. For PowerShell, Microsoft.PowerShell_profile.ps1.
-
+9. For PowerShell, Microsoft.PowerShell_profile.ps1.
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json' | Invoke-Expression
-
-10. For CMD, you need to install clink.
-    
+10. For CMD, you need to install clink.    
 clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json
+11. For WSL Ubuntu/Debian, install curl -s https://ohmyposh.dev/install.sh | bash -s (don't forget install curl and unzip)
+
+12. # esnure always load posh
+export PATH=$PATH:~/.local/bin
+if [ -f $(which oh-my-posh) ]; then
+  eval "$(oh-my-posh init bash)"
+fi
+
+nano .bashrc
+# esnure always load posh
+export PATH=$PATH:~/.local/bin
+if [ -f $(which oh-my-posh) ]; then
+  eval "$(oh-my-posh init bash)"
+fi
+
+# load posh theme
+if [ -f $(which oh-my-posh) ]; then
+  eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
+fi
