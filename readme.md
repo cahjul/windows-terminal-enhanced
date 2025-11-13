@@ -16,14 +16,14 @@ oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/
 clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json
 11. For WSL Ubuntu/Debian, install curl -s https://ohmyposh.dev/install.sh | bash -s (don't forget install curl and unzip)
 
-12. # esnure always load posh
+12. # ensure always load posh
 export PATH=$PATH:~/.local/bin
 if [ -f $(which oh-my-posh) ]; then
   eval "$(oh-my-posh init bash)"
 fi
 
 nano .bashrc
-# esnure always load posh
+# ensure always load posh
 export PATH=$PATH:~/.local/bin
 if [ -f $(which oh-my-posh) ]; then
   eval "$(oh-my-posh init bash)"
