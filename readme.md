@@ -98,19 +98,7 @@ clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-
 
 ---
 
-## ✅ 10. Configure for WSL (Ubuntu/Debian)
-
-Install Oh My Posh using:
-
-```
-curl -s https://ohmyposh.dev/install.sh | bash -s
-```
-
-*(Ensure you have `curl` and `unzip` installed.)*
-
----
-
-## 🧩 11. Ensure Oh My Posh Loads Automatically (WSL)
+## 🧩 10. Ensure Oh My Posh Loads Automatically for WSL (Ubuntu/Debian)
 
 Edit `.bashrc`:
 
@@ -132,6 +120,19 @@ if [ -f $(which oh-my-posh) ]; then
   eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
 fi
 ```
+---
+
+## ✅ 11. Install Oh My Posh WSL (Ubuntu/Debian)
+
+Install Oh My Posh using:
+
+```
+curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+
+*(Ensure you have `curl` and `unzip` installed.)*
+
+---
 
 ---
 
