@@ -1,28 +1,125 @@
-1. Install Windows Terminal from Microsoft Store
-2. Set Windows Terminal as default terminal instead of powershell at Setting > System > For developers.
-3. Install font from here: https://github.com/ryanoasis/nerd-fonts/releases and choose your font from Windows Terminal Setting > Default > Appearence > Font.
-4. Install Theme from https://windowsterminalthemes.dev/ and apply at Terminal Setting > Open JSON Files.
-5. Install Oh-My-Posh by using this instruction https://ohmyposh.dev/docs/installation/windows .
-6. Configure Shell using this https://ohmyposh.dev/docs/installation/prompt .
-7. For Git Bash, 
+# Windows Terminal + Oh My Posh Setup Guide
+
+A beautiful and complete setup to enhance your Windows Terminal, PowerShell, Git Bash, CMD, and WSL experience.
+
+---
+
+## ✅ 1. Install Windows Terminal
+
+Download from **Microsoft Store**.
+
+---
+
+## ✅ 2. Set Windows Terminal as Default
+
+Go to:
+**Settings → System → For Developers → Terminal**
+Select **Windows Terminal**.
+
+---
+
+## ✅ 3. Install Nerd Font
+
+Download from:
+[https://github.com/ryanoasis/nerd-fonts/releases](https://github.com/ryanoasis/nerd-fonts/releases)
+
+After installation:
+
+* Open **Windows Terminal Settings**
+* Go to **Defaults → Appearance → Font**
+* Choose your Nerd Font
+
+---
+
+## ✅ 4. Install Windows Terminal Theme
+
+Visit:
+[https://windowsterminalthemes.dev/](https://windowsterminalthemes.dev/)
+
+To apply:
+
+1. Open Windows Terminal
+2. Go to **Settings → Open JSON File**
+3. Paste the theme configuration
+
+---
+
+## ✅ 5. Install Oh-My-Posh
+
+Official guide:
+[https://ohmyposh.dev/docs/installation/windows](https://ohmyposh.dev/docs/installation/windows)
+
+---
+
+## ✅ 6. Configure Shell Prompt
+
+Follow the setup guide:
+[https://ohmyposh.dev/docs/installation/prompt](https://ohmyposh.dev/docs/installation/prompt)
+
+---
+
+## ✅ 7. Configure Oh My Posh for Git Bash
+
+```
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 nano ~/.bashrc
-Inside .bashrc
+```
+
+Inside `.bashrc`:
+
+```
 eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
-9. For PowerShell, Microsoft.PowerShell_profile.ps1.
+```
+
+---
+
+## ✅ 8. Configure for PowerShell
+
+Edit profile:
+**Microsoft.PowerShell_profile.ps1**
+
+Add:
+
+```
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json' | Invoke-Expression
-10. For CMD, you need to install clink..
+```
+
+---
+
+## ✅ 9. Configure for CMD
+
+Install **clink**, then run:
+
+```
 clink set ohmyposh.theme https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json
-11. For WSL Ubuntu/Debian, install curl -s https://ohmyposh.dev/install.sh | bash -s (don't forget install curl and unzip)
+```
 
-12. # ensure always load posh
-export PATH=$PATH:~/.local/bin
-if [ -f $(which oh-my-posh) ]; then
-  eval "$(oh-my-posh init bash)"
-fi
+---
 
-nano .bashrc
+## ✅ 10. Configure for WSL (Ubuntu/Debian)
+
+Install Oh My Posh using:
+
+```
+curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+
+*(Ensure you have `curl` and `unzip` installed.)*
+
+---
+
+## 🧩 11. Ensure Oh My Posh Loads Automatically (WSL)
+
+Edit `.bashrc`:
+
+```
+nano ~/.bashrc
+```
+
+Add the following:
+
+```
 # ensure always load posh
 export PATH=$PATH:~/.local/bin
 if [ -f $(which oh-my-posh) ]; then
@@ -33,3 +130,10 @@ fi
 if [ -f $(which oh-my-posh) ]; then
   eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/atomic.omp.json)"
 fi
+```
+
+---
+
+## 🎉 Done!
+
+Your terminal is now modern, clean, and fully themed with Nerd Fonts + Oh My Posh + custom themes.
